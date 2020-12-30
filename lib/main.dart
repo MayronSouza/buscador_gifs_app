@@ -6,6 +6,7 @@ void main() {
   runApp(MaterialApp(
     title: 'Buscador de GIFs',
     home: HomePage(),
+    theme: ThemeData(hintColor: Colors.white),
     debugShowCheckedModeBanner: false,
   ));
 }
