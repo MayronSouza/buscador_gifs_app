@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:buscador_gifs_app/ui/gif_page.dart';
+import 'package:share/share.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -130,6 +131,10 @@ class _HomePageState extends State<HomePage> {
                     builder: (context) =>
                         GifPage(snapshot.data['data'][index])),
               );
+            },
+            onLongPress: () {
+              Share.share(snapshot.data['data'][index]['images']['fixed_height']
+                  ['url']);
             },
           );
         } else {
